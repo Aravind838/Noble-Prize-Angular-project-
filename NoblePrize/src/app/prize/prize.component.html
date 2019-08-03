@@ -1,0 +1,50 @@
+<div class="banner-item bg-overlay" style="background-image:url(/assets/images/NP1.jpg)">
+   <div class="banner-content text-center">
+
+      <mat-card>
+          <mat-card-header>
+             <mat-form-field class="select1">
+               <mat-label>Year of winning Noble prize</mat-label>
+               <mat-select [(ngModel)]="searchText">
+                  <mat-option *ngFor="let year of YEAR" [value]="year">
+                     {{  year }}
+                  </mat-option>
+               </mat-select>
+             </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Category</mat-label>
+                 <mat-select [(ngModel)]="searchText">
+                    <mat-option *ngFor="let Category of Categories" [value]="Category">
+                       {{  Category }}
+                    </mat-option>
+                 </mat-select>
+             </mat-form-field>
+             <h3>{{errorMsg}}</h3>
+         </mat-card-header>
+  <table>
+     <tr>
+         <th>Year</th>
+         <th>Category</th>
+         <th>Motivation</th>
+         <th>Laureates</th>
+     </tr>
+
+     <tr class="table_data" *ngFor="let noble of Nobleprizes | unique: {year: searchText, category: searchText}">
+          <td>{{ noble.year }}</td>
+          <td>{{ noble.category }}</td>
+          <td>{{ noble.overallMotivation }}</td>
+          <div *ngFor="let names of noble.laureates">
+              <p>
+                  {{ names.id }}  <br>
+                  {{ names.firstname }}
+                  {{ names.surname }}
+              </p>
+          </div>
+          <mat-divider></mat-divider>
+     </tr>
+     </table>
+
+       </mat-card>  
+   </div>
+</div>   

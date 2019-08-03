@@ -1,0 +1,62 @@
+.mat-card {
+  width: 70%;
+  position: relative;
+  left: 15%;
+  background-color: cornsilk;
+}
+table {
+ width: 100%;
+}
+.mat-form-field {
+ font-size: 14px;
+ width: 46%;
+}
+.select1 {
+  margin-right: 12px
+}
+th, td, p {
+ text-align: center;
+}
+table, td, th {
+  border: 1px solid lightgrey;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.table_data {
+  background-color: lavender;
+}
+th {
+  height: 50px;
+  padding: 0 20px;
+  background-color: #0465b2;
+  color: white;
+}
+mat-divider.mat-divider.mat-divider-horizontal {
+ width:100%;
+ position: relative;
+ border-top-color: lightgrey;
+}
+
+#banner {
+  padding: 0;
+}
+.banner-item {
+  min-height: 800px;
+  color: #fff;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+}
+.banner-content,
+.banner-reg-form {
+  padding: 100px 0;
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
